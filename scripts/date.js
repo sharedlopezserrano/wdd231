@@ -95,8 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function renderCourses(courseList) {
     certificateSection.innerHTML = "";
-
-    // Row of course buttons
     const row = document.createElement("div");
     row.className = "course-row";
     courseList.forEach((course, idx) => {
@@ -111,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     certificateSection.appendChild(row);
 
-    // Details for selected course
     if (selectedIdx !== null && courseList[selectedIdx]) {
       const course = courseList[selectedIdx];
       const details = document.createElement("div");
@@ -144,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
   cseBtn.addEventListener("click", () => filterCourses("cse"));
   wddBtn.addEventListener("click", () => filterCourses("wdd"));
 
-  // Initial render
   renderCourses(courses);
 
   const modSpan = document.getElementById("last-modified");

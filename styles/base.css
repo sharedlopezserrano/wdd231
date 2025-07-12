@@ -2,7 +2,6 @@
     font-family: 'Roboto', Arial, sans-serif;
     box-sizing: border-box;
 }
-/* Header styles */
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
@@ -24,9 +23,6 @@ header span {
     color: #000000;
 
 }
-
-/* Hamburger styles */
-
 .hamburger {
     background: none;
     border: none;
@@ -47,12 +43,12 @@ header span {
 
 .navigation {
     display: none;
-    background: #222; /* Add background color to nav bar */
+    background: #222; 
     color: #fff;
 }
 .navigation.show {
     display: block;
-    background: #222; /* Ensure background stays on mobile */
+    background: #222; 
     color: #fff;
 }
 
@@ -76,14 +72,13 @@ header span {
     text-decoration: none;
     border-bottom: none;
     background: transparent;
-    /* Prevent twitching by reserving background and border space */
     transition: background 0.2s, color 0.2s;
     min-width: 120px;
     box-sizing: border-box;
 }
 
 .navigation li.current {
-    background-color: #222; /* Match the bar color */
+    background-color: #222; 
 }
 
 .navigation a:hover {
