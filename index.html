@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Shared Lopez">
-    <meta name="description" content="Shared's personal website showcasing projects and skills.">
-    <title>Shared Web Site</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Shared Lopez" />
+  <meta name="description" content="Shared's personal website showcasing projects and skills." />
+  <title>Shared Web Site</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="images/games.svg" alt="Site Logo" width="32" height="32">
-        <span>Shared's Site Title</span>
-        <button id="ham-btn" class="hamburger"></button>
-    </header>
-    <nav id="nav-bar" class="navigation">
-  <ul>
-    <li><a href="#">News & Events</a></li>
-    <li class="current"><a href="#">Dedicated Temples</a></li>
-    <li><a href="#">Announced Temples</a></li>
-  </ul>
-</nav>
-    <main>
-        <!-- <h1>Dedicated Temples</h1> -->
-         <h1>Page Title</h1>
-    </main>
-    <footer>
-        <div class="social">
-            <a href="https://www.facebook.com/SharedLopezSerrano/?locale=es_LA" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
-            <a href="https://www.linkedin.com/in/shared-lopez/" target="_blank"><img src="images/linkedin.svg" alt="linkedIn" width="16" height="16"></a>
-            <a href="https://github.com/sharedlopezserrano/wdd231" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
-            <a href="https://www.instagram.com/sharecitox/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
-            <p></p>
-            <p></p>
-        </div>
-    </footer>
-    <script src="scripts/navigation.js"></script>
+  <header>
+    <img src="images/games.svg" alt="Site Logo" width="32" height="32" />
+    <span>Shared's Site</span>
+    <button id="ham-btn" class="hamburger"></button>
+  </header>
+
+  <nav id="nav-bar" class="navigation">
+    <ul>
+      <li class="current"><a href="index.html">Home</a></li>
+      <li class="current"><a href="#">Chamber Project</a></li>
+      <li class="current"><a href="#">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1>Home</h1>
+    <div class="card-box">
+      <section>
+        <h2 class="about-me">About Me</h2>
+        <p class="padded">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, commodi sunt recusandae at inventore repellendus in iusto iste reprehenderit magni sequi obcaecati excepturi, dolore necessitatibus modi et. Animi tempore quia est ab voluptate quod vel autem aliquid ex laborum. Vel unde laboriosam sint beatae quidem perferendis eligendi ipsam, odio quaerat consequatur quisquam, nulla sit explicabo velit doloremque dolor iusto, eos provident aperiam officia fuga optio. Asperiores, tenetur fuga consequatur eligendi ipsam debitis est nam, explicabo beatae officiis deserunt dolor quos. Aperiam, quasi non reiciendis perferendis libero doloremque eligendi! At dolorem officia praesentium voluptatum velit sed quisquam dolor eligendi eum minus!</p>
+      </section>
+      <section>
+        <h2 class="student">Student Photo</h2>
+        <img src="images/profile-picture.jpg" alt="profile-picture" width="200" height="260" />
+      </section>
+    </div>
+
+    <section>
+      <div class="course-bar">
+        <h2>Web Certificate Courses</h2>
+      </div>
+      <div class="course-buttons">
+        <button id="btn-all">All</button>
+        <button id="btn-cse">CSE</button>
+        <button id="btn-wdd">WDD</button>
+      </div>
+      <div class="course-list" id="certificate-section"></div>
+      <p class="credit-info">The total credits for courses listed above is 6</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.facebook.com/SharedLopezSerrano/?locale=es_LA" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16" /></a>
+      <a href="https://www.linkedin.com/in/shared-lopez/" target="_blank"><img src="images/linkedin.svg" alt="linkedIn" width="16" height="16" /></a>
+      <a href="https://github.com/sharedlopezserrano/wdd231" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16" /></a>
+      <a href="https://www.instagram.com/sharecitox/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16" /></a>
+    </div>
+    <p>Shared Lopez | Chile</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
 </body>
 </html>
