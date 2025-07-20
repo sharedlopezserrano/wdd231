@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Blue Ocean Tech",
+      "address": "123 Main St, Blue City",
+      "phone": "555-123-4567",
+      "url": "https://blueoceantech.com",
+      "image": "blue-ocean.png",
+      "membership": 3,
+      "tagline": "Innovating the future",
+      "email": "info@blueoceantech.com"
+    },
+    {
+      "name": "Skyline Marketing",
+      "address": "456 Market Ave, Skyville",
+      "phone": "555-234-5678",
+      "url": "https://skylinemarketing.com",
+      "image": "skyline.png",
+      "membership": 2,
+      "tagline": "Reach new heights",
+      "email": "contact@skylinemarketing.com"
+    },
+    {
+      "name": "AquaPure Water",
+      "address": "789 River Rd, Aqua Town",
+      "phone": "555-345-6789",
+      "url": "https://aquapure.com",
+      "image": "aquapure.png",
+      "membership": 1,
+      "tagline": "Clean water for all",
+      "email": "support@aquapure.com"
+    },
+    {
+      "name": "TechNest Solutions",
+      "address": "321 Innovation Blvd, Tech City",
+      "phone": "555-456-7890",
+      "url": "https://technest.com",
+      "image": "technest.png",
+      "membership": 2,
+      "tagline": "Your IT partner",
+      "email": "hello@technest.com"
+    },
+    {
+      "name": "Golden Gate Finance",
+      "address": "654 Wealth St, Goldtown",
+      "phone": "555-567-8901",
+      "url": "https://goldengatefinance.com",
+      "image": "goldengate.png",
+      "membership": 3,
+      "tagline": "Securing your future",
+      "email": "info@goldengatefinance.com"
+    },
+    {
+      "name": "Silver Spoon Catering",
+      "address": "987 Gourmet Ave, Food City",
+      "phone": "555-678-9012",
+      "url": "https://silverspooncatering.com",
+      "image": "silverspoon.png",
+      "membership": 2,
+      "tagline": "Taste the difference",
+      "email": "events@silverspooncatering.com"
+    },
+    {
+      "name": "Member Movers",
+      "address": "159 Moving Rd, Transit Town",
+      "phone": "555-789-0123",
+      "url": "https://membermovers.com",
+      "image": "membermovers.png",
+      "membership": 1,
+      "tagline": "We move you forward",
+      "email": "move@membermovers.com"
+    }
+  ]
+}
