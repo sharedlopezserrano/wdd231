@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Chamber Networking Breakfast",
+    "date": "2024-06-28",
+    "description": "Join fellow business leaders for networking and coffee."
+  },
+  {
+    "id": 2,
+    "title": "Small Business Workshop",
+    "date": "2024-07-23",
+    "description": "Learn essential skills for growing your small business."
+  },
+  {
+    "id": 3,
+    "title": "Annual Chamber Gala",
+    "date": "2024-08-10",
+    "description": "Celebrate our community's achievements at our annual gala."
+  }
+]

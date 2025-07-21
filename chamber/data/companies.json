@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Tech Solutions Inc.",
+    "tagline": "Innovative Technology Solutions",
+    "description": "Leading provider of cutting-edge technology solutions for businesses.",
+    "phone": "(11) 9876-5432",
+    "email": "info@techsolutions.com",
+    "website": "https://techsolutions.com",
+    "address": "123 Tech Street, São Paulo, SP",
+    "image": "images/tech-solutions.jpg",
+    "membershipLevel": "Gold"
+  },
+  {
+    "id": 2,
+    "name": "Green Earth Landscaping",
+    "tagline": "Beautiful Sustainable Gardens",
+    "description": "Eco-friendly landscaping services for residential and commercial properties.",
+    "phone": "(11) 8765-4321",
+    "email": "contact@greenearth.com",
+    "website": "https://greenearth.com",
+    "address": "456 Garden Avenue, São Paulo, SP",
+    "image": "images/green-earth.jpg",
+    "membershipLevel": "Silver"
+  },
+  {
+    "id": 3,
+    "name": "Family Restaurant",
+    "tagline": "Authentic Local Cuisine",
+    "description": "Traditional family recipes served with love for over 30 years.",
+    "phone": "(11) 7654-3210",
+    "email": "hello@familyrestaurant.com",
+    "website": "https://familyrestaurant.com",
+    "address": "789 Food Court, São Paulo, SP",
+    "image": "images/family-restaurant.jpg",
+    "membershipLevel": "Gold"
+  },
+  {
+    "id": 4,
+    "name": "Auto Repair Shop",
+    "tagline": "Quality Car Care",
+    "description": "Professional automotive repair services with certified technicians.",
+    "phone": "(11) 6543-2109",
+    "email": "service@autorepair.com",
+    "website": "https://autorepair.com",
+    "address": "321 Motor Street, São Paulo, SP",
+    "image": "images/auto-repair.jpg",
+    "membershipLevel": "Silver"
+  },
+  {
+    "id": 5,
+    "name": "Local Bakery",
+    "tagline": "Fresh Daily Bakes",
+    "description": "Artisanal breads and pastries made fresh daily with local ingredients.",
+    "phone": "(11) 5432-1098",
+    "email": "orders@localbakery.com",
+    "website": "https://localbakery.com",
+    "address": "654 Bread Avenue, São Paulo, SP",
+    "image": "images/bakery.jpg",
+    "membershipLevel": "Bronze"
+  }
+]
