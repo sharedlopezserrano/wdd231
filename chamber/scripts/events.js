@@ -3,7 +3,7 @@ async function loadEvents() {
     const response = await fetch('data/events.json');
     if (response.ok) {
       const events = await response.json();
-      displayEvents(events.slice(0, 3)); // Show only first 3 events
+      displayEvents(events.slice(0, 3));
     } else {
       console.error('Failed to load events');
       displayFallbackEvents();

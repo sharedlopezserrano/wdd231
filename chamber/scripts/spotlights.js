@@ -69,5 +69,4 @@ function displayFallbackSpotlights() {
   `;
 }
 
-// Load spotlights when the page loads
 document.addEventListener('DOMContentLoaded', loadSpotlights);

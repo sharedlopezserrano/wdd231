@@ -7,14 +7,12 @@ const forecastURL = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon
 
 async function apiFetch() {
   try {
-    // Fetch current weather
     const currentResponse = await fetch(currentWeatherURL);
     if (currentResponse.ok) {
       const currentData = await currentResponse.json();
       displayCurrentWeather(currentData);
     }
 
-    // Fetch forecast
     const forecastResponse = await fetch(forecastURL);
     if (forecastResponse.ok) {
       const forecastData = await forecastResponse.json();
@@ -43,7 +41,6 @@ function displayForecast(data) {
     const forecastContainer = document.querySelector("#forecast");
     if (!forecastContainer) return;
 
-    // Get daily forecasts (every 8th item = 24 hours apart)
     const dailyForecasts = data.list.filter((item, index) => index % 8 === 0).slice(0, 3);
     
     const forecastHTML = dailyForecasts.map(forecast => {
