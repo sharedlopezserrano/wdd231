@@ -674,325 +674,474 @@ footer p {
     padding: 0;
     color: var(--text-color);
 }
-@media (max-width: 768px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin: 1rem auto;
-        padding: 0 0.5rem;
-        width: 100%;
-        max-width: 100vw;
-    }
-    
-    .card {
-        padding: 1.25rem;
-        min-height: 200px;
-        aspect-ratio: auto;
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    .events-card {
-        aspect-ratio: auto;
-        max-width: 100%;
-        text-align: left;
-    }
-    
-    .event-item {
-        width: 100%;
-        margin-bottom: 0.5rem;
-        padding: 0.5rem;
-    }
-    
-    .card #temperature {
-        font-size: 2rem;
-    }
-    
-    .card h2 {
-        font-size: 1.25rem;
-    }
 
-    .hamburger {
-        display: block;
-    }
+/* Join Page Styles */
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
 
-    .navigation {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--dark-blue);
-        border-top: 1px solid var(--primary-color);
-        transform: translateY(-100%);
+.membership-form {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--card-border);
+    height: fit-content;
+}
+
+.membership-form h2 {
+    color: var(--accent-blue);
+    margin: 0 0 1.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.membership-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form textarea {
+    padding: 0.75rem;
+    border: 2px solid var(--card-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: border-color 0.3s ease;
+    font-family: var(--font-family);
+}
+
+.membership-form input[type="text"]:focus,
+.membership-form input[type="email"]:focus,
+.membership-form input[type="tel"]:focus,
+.membership-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.membership-form fieldset {
+    border: 2px solid var(--card-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: var(--background-color);
+}
+
+.membership-form legend {
+    color: var(--accent-blue);
+    font-weight: 600;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+}
+
+.membership-form fieldset label {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.membership-form input[type="radio"] {
+    margin-right: 0.75rem;
+    margin-top: 0;
+    accent-color: var(--accent-blue);
+    width: 18px;
+    height: 18px;
+}
+
+.membership-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.membership-form input[type="submit"] {
+    background: var(--accent-blue);
+    color: var(--card-background);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.membership-form input[type="submit"]:hover {
+    background: var(--dark-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.membership-cards h2 {
+    color: var(--accent-blue);
+    margin: 0 0 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.membership-card {
+    background: var(--card-background);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.membership-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    transition: left 0.5s ease;
+}
+
+.membership-card.np-card::before {
+    background: linear-gradient(90deg, var(--text-secondary), var(--accent-blue));
+}
+
+.membership-card.bronze-card::before {
+    background: linear-gradient(90deg, #cd7f32, #daa520);
+}
+
+.membership-card.silver-card::before {
+    background: linear-gradient(90deg, #c0c0c0, #e5e5e5);
+}
+
+.membership-card.gold-card::before {
+    background: linear-gradient(90deg, #ffd700, #ffed4e);
+}
+
+.membership-card:hover::before {
+    left: 0;
+}
+
+.membership-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.membership-card h3 {
+    color: var(--accent-blue);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.membership-card .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin: 0.5rem 0;
+}
+
+.membership-card p {
+    color: var(--text-secondary);
+    margin: 0.5rem 0 1rem 0;
+    font-size: 0.95rem;
+}
+
+.info-btn {
+    background: var(--accent-blue);
+    color: var(--card-background);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.info-btn:hover {
+    background: var(--dark-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--card-background);
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
         opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 1000;
+        transform: translateY(-50px);
     }
-
-    .navigation.open {
-        transform: translateY(0);
+    to {
         opacity: 1;
-        visibility: visible;
+        transform: translateY(0);
     }
+}
 
-    .navigation ul {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 0;
-    }
+.modal-content h3 {
+    color: var(--accent-blue);
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 
-    .navigation li {
-        width: 100%;
-        text-align: center;
-    }
+.modal-content ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: var(--text-color);
+}
 
-    .navigation a {
-        display: block;
-        padding: 1rem;
-        border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-        border-radius: 0;
-    }
+.modal-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
 
-    .navigation li:last-child a {
-        border-bottom: none;
-    }
+.close {
+    color: var(--text-secondary);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+    margin: -0.5rem -0.5rem 0 0;
+}
 
-    header {
-        padding: 1rem;
-    }
+.close:hover {
+    color: var(--accent-blue);
+}
 
-    header span {
-        font-size: 1.1rem;
-    }
+/* Thank You Page Styles */
+.thankyou-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
 
-    .spotlights-grid {
+.thankyou-container h1 {
+    color: var(--accent-blue);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.thankyou-message {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.submission-details {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--card-border);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.submission-details h2 {
+    color: var(--accent-blue);
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.data-item {
+    padding: 0.75rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-blue);
+}
+
+.data-item strong {
+    color: var(--accent-blue);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.next-steps {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--card-border);
+    padding: 2rem;
+    text-align: center;
+}
+
+.next-steps h2 {
+    color: var(--accent-blue);
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.next-steps p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: var(--card-background);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+    background: var(--dark-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Mobile Responsive Styles for Join Page */
+@media (max-width: 768px) {
+    .join-container {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .spotlight-info h3 {
-        font-size: 1.2rem;
-    }
-    
-    .membership-badge {
-        top: 0.5rem;
-        right: 0.5rem;
-        font-size: 0.7rem;
-        padding: 0.3rem 0.6rem;
-    }
-    
-    footer {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 1.5rem 1rem 1rem;
-        justify-items: center;
-    }
-    
-    .contact, .info {
-        text-align: center;
-        padding: 0;
-        margin: 0.5rem 0;
-        width: 100%;
-    }
-    
-    .social-media {
-        margin: 1rem 0;
-        justify-content: center;
-    }
-
-    .directory-grid {
-        grid-template-columns: 1fr;
+        gap: 2rem;
         padding: 0 0.5rem;
-        width: 100%;
-        max-width: 100vw;
     }
 
-    .business-card {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
+    .membership-form {
+        padding: 1.5rem;
     }
 
-    .hero-btn {
-        right: 1rem;
-        left: auto;
-        max-width: calc(100vw - 2rem);
+    .membership-cards {
+        order: -1;
     }
 
-    .hero {
-        min-height: 250px;
+    .membership-card {
+        padding: 1.25rem;
     }
-    
-    .hero-img {
-        height: 250px;
+
+    .modal-content {
+        margin: 20% auto;
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .form-data-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .thankyou-container {
+        padding: 0 0.5rem;
+    }
+
+    .submission-details,
+    .next-steps {
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 600px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin: 1rem 0;
-        padding: 0 0.5rem;
-        width: 100%;
-        max-width: 100vw;
-    }
-    
-    .card {
+    .membership-form {
         padding: 1rem;
-        min-height: 180px;
-        aspect-ratio: auto;
-        max-width: 100%;
-        width: 100%;
     }
-    
-    .events-card {
-        aspect-ratio: auto;
-        max-width: 100%;
+
+    .membership-form h2 {
+        font-size: 1.5rem;
     }
-    
-    .event-item {
-        width: 100%;
-        margin-bottom: 0.5rem;
-        padding: 0.4rem;
-        font-size: 0.85rem;
+
+    .membership-card {
+        padding: 1rem;
     }
-    
-    .event-title {
-        font-size: 0.9rem;
+
+    .membership-card h3 {
+        font-size: 1.2rem;
     }
-    
-    .event-description {
-        font-size: 0.8rem;
+
+    .membership-card .price {
+        font-size: 1.3rem;
     }
-    
-    .card #temperature {
-        font-size: 1.8rem;
+
+    .modal-content {
+        margin: 30% auto;
+        padding: 1rem;
     }
-    
-    .card h2 {
+
+    .thankyou-container h1 {
+        font-size: 2rem;
+    }
+
+    .thankyou-message {
         font-size: 1.1rem;
     }
 
-    .hero {
-        min-height: 200px;
-        padding-bottom: 2.5rem;
-    }
-    
-    .hero-img {
-        min-height: 200px;
-        height: 200px;
-    }
-    
-    .hero-btn {
-        bottom: 0.5rem;
-        right: 0.5rem;
-        left: 0.5rem;
-        font-size: 0.95rem;
-        padding: 0.5rem 1rem;
-        max-width: none;
-        width: calc(100% - 1rem);
-    }
-    
-    h1 {
-        font-size: 2rem;
-        margin: 1.5rem 0 1rem 0;
-    }
-    
-    .directory-grid {
-        gap: 1.5rem;
-        padding: 0 0.5rem;
-        min-height: 300px;
-        width: 100%;
-        max-width: 100vw;
-    }
-    
-    .business-card {
-        padding: 1.25rem;
-        min-height: 240px;
-        height: 240px;
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-    }
-    
-    .business-img {
-        width: 100px;
-        height: 55px;
-        margin: 0 auto 0.75rem auto;
-    }
-    
-    .business-info h2 {
-        font-size: 1.05rem;
-    }
-    
-    .business-info p {
-        font-size: 0.8rem;
-        margin: 0.3rem 0;
-    }
-    
-    .business-info p:first-of-type {
-        font-size: 0.85rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .business-info strong {
-        font-size: 0.75rem;
-    }
-    
-    .business-info a {
-        font-size: 0.75rem;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        max-width: 100%;
-    }
-
-    header {
-        padding: 0.75rem;
-    }
-
-    header span {
-        font-size: 1rem;
-    }
-
-    .view-toggle {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .view-toggle button {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .loading-placeholder {
-        min-height: 150px;
-        padding: 2rem;
-        font-size: 1rem;
-    }
-
-    .spotlights-section h2 {
-        font-size: 1.6rem;
-    }
-    
-    .spotlight-img {
-        height: 160px;
-    }
-    
-    .spotlight-info {
+    .submission-details,
+    .next-steps {
         padding: 1rem;
-        width: 100%;
     }
-    
-    footer {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 1.5rem 0.5rem 1rem;
-        justify-items: center;
-        width: 100%;
-        max-width: 100vw;
+
+    .data-item {
+        padding: 0.5rem;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
     }
 }

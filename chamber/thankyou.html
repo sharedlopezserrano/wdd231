@@ -3,18 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chamber Directory - Toledo Chamber of Commerce</title>
-  <meta name="description" content="Explore the official directory of local businesses, services, and members of YourCity's Chamber of Commerce.">
+  <title>Thank You - Toledo Chamber of Commerce</title>
+  <meta name="description" content="Thank you for joining the Toledo Chamber of Commerce. Your application has been received.">
   <meta name="author" content="Shared Lopez">
   <link rel="icon" href="images/building.svg" type="image/png">
-  <meta property="og:title" content="Local Chamber Directory - Toledo Chamber of Commerce">
-  <meta property="og:description" content="Explore our official member directory of businesses and services in YourCity. Connect with your local community today.">
-  <meta property="og:image" content="https://sharedlopezserrano.github.io/wdd231/chamber/images/chamber-hero.jpg">
-  <meta property="og:url" content="https://sharedlopezserrano.github.io/wdd231/chamber/directory.html">
-  <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/directory.css">
-  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/thankyou.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -25,24 +19,33 @@
     <span>Toledo Chamber of Commerce</span>
     <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
     <nav id="nav-bar" class="navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="join.html">Join</a></li>
-      <li><a href="#">Discover</a></li>
-    </ul>
-  </nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="#">Discover</a></li>
+      </ul>
+    </nav>
   </header>
+  
   <main>
-    <div class="hero">
-      <img src="images/chamber-hero.jpg" alt="Toledo Chamber of Commerce building exterior with modern architecture" class="hero-img">
-      <button class="hero-btn">Keynote Tickets</button>
-    </div>
-    <h1>Directory</h1>
-    <div class="directory-grid" id="directory-grid">
-      <div class="loading-placeholder">Loading businesses...</div>
+    <div class="thankyou-container">
+      <h1>Thank You!</h1>
+      <p class="thankyou-message">Your membership application has been successfully submitted. We appreciate your interest in joining the Toledo Chamber of Commerce.</p>
+      
+      <div class="submission-details">
+        <h2>Application Summary</h2>
+        <div id="form-data"></div>
+      </div>
+      
+      <div class="next-steps">
+        <h2>What's Next?</h2>
+        <p>Our membership team will review your application and contact you within 2-3 business days. In the meantime, feel free to explore our website and learn more about our community.</p>
+        <a href="index.html" class="btn-primary">Return to Home</a>
+      </div>
     </div>
   </main>
+  
   <footer>
     <section class="contact">
       <p class="black">Toledo Chamber of Commerce</p>
