@@ -1056,7 +1056,6 @@ footer p {
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
-/* Mobile Responsive Styles for Join Page */
 @media (max-width: 768px) {
     .join-container {
         grid-template-columns: 1fr;
@@ -1066,10 +1065,11 @@ footer p {
 
     .membership-form {
         padding: 1.5rem;
+        order: 1;
     }
 
     .membership-cards {
-        order: -1;
+        order: 2;
     }
 
     .membership-card {
@@ -1100,6 +1100,11 @@ footer p {
 @media (max-width: 600px) {
     .membership-form {
         padding: 1rem;
+        order: 1;
+    }
+
+    .membership-cards {
+        order: 2;
     }
 
     .membership-form h2 {

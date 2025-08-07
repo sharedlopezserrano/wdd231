@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (formDataDiv) {
         let formDataHTML = '<div class="form-data-grid">';
+
+        const firstName = urlParams.get('first-name');
         const lastName = urlParams.get('last-name');
         const email = urlParams.get('email');
         const mobile = urlParams.get('mobile');
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navigation.classList.toggle('open');
         });
     }
+
     const lastModified = document.getElementById('last-modified');
     if (lastModified) {
         lastModified.textContent = `Last modified: ${document.lastModified}`;
