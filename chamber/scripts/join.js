@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Consolidated hamburger menu functionality
     const hamburger = document.getElementById('ham-btn');
     const navigation = document.getElementById('nav-bar');
 
@@ -54,6 +55,25 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('open');
             navigation.classList.toggle('open');
+        });
+
+        // Close menu when clicking on a link (mobile)
+        const navLinks = navigation.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    navigation.classList.remove('open');
+                    hamburger.classList.remove('open');
+                }
+            });
+        });
+
+        // Close menu when resizing to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navigation.classList.remove('open');
+                hamburger.classList.remove('open');
+            }
         });
     }
 
