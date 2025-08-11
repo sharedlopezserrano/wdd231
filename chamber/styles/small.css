@@ -34,9 +34,15 @@
     text-align: center;
     overflow: hidden;
     min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    display: grid;
+    grid-template-areas: 
+        "image"
+        "title"
+        "industry"
+        "headquarters"
+        "description"
+        "button";
+    gap: 1rem;
     opacity: 0;
     transform: translateY(50px);
     animation: slideUpFade 0.6s ease forwards;
@@ -44,7 +50,8 @@
     will-change: transform, opacity;
 }
 
-.block-image {
+.block-image { 
+    grid-area: image;
     width: 100%;
     max-width: 300px;
     height: 200px;
@@ -57,28 +64,32 @@
     aspect-ratio: 3 / 2;
 }
 
-.block-title {
+.block-title { 
+    grid-area: title;
     margin: 0.5rem 0;
     color: #333;
     font-size: 1.2rem;
     text-align: left;
 }
 
-.block-industry {
+.block-industry { 
+    grid-area: industry;
     font-style: italic;
     color: #666;
     margin: 0.3rem 0;
     text-align: left;
 }
 
-.block-headquarters {
+.block-headquarters { 
+    grid-area: headquarters;
     color: #555;
     margin: 0.3rem 0;
     font-size: 0.9rem;
     text-align: left;
 }
 
-.block-description {
+.block-description { 
+    grid-area: description;
     color: #444;
     line-height: 1.4;
     margin: 0.5rem 0;
@@ -89,6 +100,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     flex-grow: 1;
+}
+
+.learn-more-btn { 
+    grid-area: button; 
 }
 
 .visitor-message {
