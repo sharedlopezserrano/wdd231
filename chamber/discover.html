@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chamber Directory - Toledo Chamber of Commerce</title>
-<meta name="description" content="Welcome to the Toledo Chamber of Commerce. Discover local businesses, events, and opportunities in our community.">
+  <meta name="description" content="Welcome to the Toledo Chamber of Commerce. Discover local businesses, events, and opportunities in our community.">
   <meta name="author" content="Shared Lopez">
   <link rel="icon" href="images/building.svg" type="image/png">
   <meta property="og:title" content="Local Chamber Home page - Toledo Chamber of Commerce">
@@ -12,11 +12,21 @@
   <meta property="og:image" content="https://sharedlopezserrano.github.io/wdd231/chamber/images/chamber-hero.jpg">
   <meta property="og:url" content="https://sharedlopezserrano.github.io/wdd231/chamber/">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/directory.js" defer></script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <link rel="preload" as="image" href="images/codelco.webp">
+  <link rel="preload" as="image" href="images/sociedad-minera.webp">
+  
+  <link rel="stylesheet" href="styles/styles.css">
+  
+  <link rel="stylesheet" href="styles/small.css" media="all">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 38rem)">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 64rem)">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
   <header>
@@ -32,36 +42,21 @@
     </ul>
   </nav>
   </header>
+  
   <main>
-    <h1>Toledo Chamber of Commerce</h1>
-    <div class="hero">
-      <img src="images/chamber-hero.jpg" alt="Toledo Chamber of Commerce building exterior with modern architecture" class="hero-img">
-      <button class="hero-btn">Join the chamber of commerce</button>
-    </div>
-        <div class="cards-container">
-        <div class="card events-card">
-        <h2>Current Events</h2>
-        <div id="events-list">
-    </div>
-  </div>
-    <div class="card">
-        <h2 id="town"></h2>
-        <img id="graphic" src="" alt="">
-        <p id="description"></p>
-        <p id="temperature"></p>
+    <div id="visitor-message" class="visitor-message"></div>
+    <h1>Discover Our Members</h1>
+    <div id="showHere" class="blocks-container"></div>
+    
+    <div id="companyModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <div id="modalBody"></div>
       </div>
     </div>
-    
-    <section class="spotlights-section">
-      <h2>Company Spotlights</h2>
-      <div class="spotlights-grid" id="spotlights-grid">
-      </div>
-    </section>
-    
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/events.js"></script>
-    <script src="scripts/spotlights.js"></script>
   </main>
+  
   <footer>
     <section class="contact">
       <p class="black">Toledo Chamber of Commerce</p>
@@ -88,5 +83,8 @@
       <p id="last-modified"></p>
     </section>
   </footer>
+  <script src="scripts/directory.js" async></script>
+  <script src="scripts/visitor-tracker.js" async></script>
+  <script src="scripts/scripts.js" type="module" async></script>
 </body>
 </html>

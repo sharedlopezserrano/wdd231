@@ -1,0 +1,116 @@
+@media (min-width: 64rem) {
+    .blocks-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .block {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: grid;
+        grid-template-areas: 
+            "image"
+            "title"
+            "industry"
+            "headquarters"
+            "description"
+            "button";
+        gap: 0.8rem;
+        text-align: center;
+        overflow: hidden;
+        height: auto;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slideUpFade 0.6s ease forwards;
+        min-height: 450px;
+    }
+    
+    .block-image { 
+        grid-area: image;
+        width: 100%;
+        max-width: 180px;
+        height: 180px;
+        object-fit: contain;
+        border-radius: 4px;
+        margin: 0 auto;
+        display: block;
+        background-color: #f9f9f9;
+        justify-self: center;
+        transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .block-image:hover {
+        transform: scale(1.15);
+        filter: brightness(1.15) contrast(1.1);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        z-index: 10;
+        position: relative;
+    }
+    
+    .block-title { 
+        grid-area: title; 
+        text-align: left;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .block-industry { 
+        grid-area: industry; 
+        text-align: left;
+        font-size: 0.85rem;
+        margin: 0;
+    }
+    
+    .block-headquarters { 
+        grid-area: headquarters; 
+        text-align: left;
+        font-size: 0.8rem;
+        margin: 0;
+    }
+    
+    .block-description { 
+        grid-area: description; 
+        text-align: left;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        font-size: 0.8rem;
+        line-height: 1.3;
+        margin: 0;
+    }
+    
+    .visitor-message {
+        padding: 1.5rem 2rem;
+        margin: 2rem auto;
+        font-size: 1.2rem;
+        text-align: center;
+        max-width: 1200px;
+    }
+    
+    .learn-more-btn {
+        grid-area: button;
+        justify-self: center;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .blocks-container {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1400px;
+    }
+}
