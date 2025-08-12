@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Press Start Gaming Restaurant</title>
+  <meta name="description" content="Welcome to Press Start Gaming Restaurant. Experience the ultimate gaming and dining adventure. Open Monday-Saturday 6:00 PM to 3:00 AM.">
+  <meta name="author" content="Shared Lopez">
+  <link rel="icon" href="images/gamepad.svg" type="image/png">
+  <meta property="og:title" content="Press Start Gaming Restaurant - Game & Dine">
+  <meta property="og:description" content="The ultimate gaming restaurant experience. Delicious food, amazing games, unforgettable nights.">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/directory.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="images/press-start-logo1.png" alt="Gaming Controller Logo">
+    <span>Press Start Gaming Restaurant</span>
+    <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+    <nav id="nav-bar" class="navigation">
+    <ul>
+      <li class="current"><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gaming.html">Gaming Zones</a></li>
+    </ul>
+  </nav>
+  </header>
+  <main>
+    <h1>Welcome to Press Start Gaming Restaurant</h1>
+    <div class="hero">
+      <img src="images/place.webp" alt="Press Start Gaming Restaurant interior with gaming stations and dining area" class="hero-img">
+      <button class="hero-btn">Reserve Your Gaming Table</button>
+    </div>
+    
+    <div class="welcome-section">
+      <h2>Game. Eat. Repeat.</h2>
+      <p>Welcome to the ultimate gaming and dining experience! At Press Start Gaming Restaurant, we combine delicious food with your favorite games for an unforgettable night out.</p>
+      
+      <div class="hours-card">
+        <h3>We're Open</h3>
+        <p class="hours">Monday - Saturday</p>
+        <p class="hours-time">6:00 PM - 3:00 AM</p>
+        <p class="closed">Closed Sundays</p>
+      </div>
+    </div>
+    
+    <div class="cards-container">
+      <div class="card events-card">
+        <h2>Gaming Events</h2>
+        <div id="events-list">
+        </div>
+      </div>
+      
+      <div class="card specials-card">
+        <h2>Today's Gaming Specials</h2>
+        <p>Power Hour: 8 PM - 9 PM</p>
+        <p>50% off all arcade games</p>
+        <p>Free appetizer with console rental</p>
+      </div>
+    </div>
+    
+    <script src="scripts/events.js"></script>
+  </main>
+  <footer>
+    <section class="contact">
+      <p class="black">Press Start Gaming Restaurant</p>
+      <p>123 Gaming Boulevard</p>
+      <p>Player City, PC 12345</p>
+      <p>info@pressstart-gaming.com</p>
+      <p>(555) GAME-FUN</p>
+    </section>
+    <div class="social-media">
+      <a href="https://www.facebook.com/SharedLopezSerrano/" target="_blank" rel="noopener noreferrer">
+        <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="https://www.linkedin.com/in/shared-lopez/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.svg" alt="linkedIn" width="24" height="24">
+      </a>
+      <a href="https://www.instagram.com/sharecitox/" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+      </a>
+    </div>
+    <section class="info">
+      <p>WDD231 Class Project</p>
+      <p>Shared Lopez</p>
+      <p>© 2023 Press Start Gaming Restaurant</p>
+      <p id="last-modified"></p>
+    </section>
+  </footer>
+</body>
+</html>

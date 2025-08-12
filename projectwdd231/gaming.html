@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Zones - Level Up Café & Arcade</title>
+  <meta name="description" content="Discover our gaming zones featuring retro arcade games and modern console experiences. Level Up Café & Arcade - where gaming meets dining.">
+  <meta name="author" content="Shared Lopez">
+  <link rel="icon" href="images/gamepad.svg" type="image/png">
+  <meta property="og:title" content="Gaming Zones - Level Up Café & Arcade">
+  <meta property="og:description" content="Explore our retro and modern gaming zones while enjoying delicious themed meals.">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/small.css" media="all">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 38rem)">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 64rem)">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></noscript>
+</head>
+<body>
+  <header>
+    <img src="images/gamepad.svg" alt="Gaming Controller Logo" width="32" height="32">
+    <span>Level Up Café & Arcade</span>
+    <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+    <nav id="nav-bar" class="navigation">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li class="current"><a href="gaming.html">Gaming Zones</a></li>
+    </ul>
+  </nav>
+  </header>
+  
+  <main>
+    <div id="visitor-message" class="visitor-message"></div>
+    <h1>Discover Our Gaming Zones</h1>
+    <div id="showHere" class="blocks-container"></div>
+    
+    <div id="companyModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <section class="contact">
+      <p class="black">Level Up Café & Arcade</p>
+      <p>123 Gaming Street</p>
+      <p>Arcade City, AC 12345</p>
+      <p>info@levelupcafe.com</p>
+      <p>(555) 123-GAME</p>
+    </section>
+    <div class="social-media">
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.svg" alt="linkedIn" width="24" height="24">
+      </a>
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+      </a>
+    </div>
+    <section class="info">
+      <p>WDD231 Class Project</p>
+      <p>Shared Lopez</p>
+      <p>© 2023 Level Up Café & Arcade</p>
+      <p id="last-modified"></p>
+    </section>
+  </footer>
+  <script src="scripts/directory.js" async></script>
+  <script src="scripts/visitor-tracker.js" async></script>
+  <script src="scripts/scripts.js" type="module" async></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+@media (min-width: 38rem) and (max-width: 63.9rem) {
+    .blocks-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .block {
+        min-height: 400px;
+    }
+    
+    .block-image {
+        height: 160px;
+    }
+    
+    .visitor-message {
+        padding: 1.25rem 2rem;
+        margin: 1.5rem 0;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .visitor-message-close {
+        top: 0.75rem;
+        right: 1rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    .blocks-container {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.2rem;
+        padding: 1.2rem;
+    }
+    
+    .block {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: grid;
+        grid-template-areas: 
+            "image image"
+            "title title"
+            "industry headquarters"
+            "description description"
+            "button button";
+        gap: 1rem;
+        text-align: center;
+        overflow: hidden;
+        min-height: 380px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slideUpFade 0.6s ease forwards;
+    }
+    
+    .block-image { grid-area: image; }
+    .block-title { 
+        grid-area: title; 
+        text-align: left;
+    }
+    .block-industry { 
+        grid-area: industry; 
+        text-align: left;
+    }
+    .block-headquarters { 
+        grid-area: headquarters; 
+        text-align: left;
+    }
+    .block-description { 
+        grid-area: description; 
+        text-align: left;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+    
+    .block-image {
+        width: 100%;
+        max-width: 350px;
+        height: 250px;
+        object-fit: contain;
+        border-radius: 4px;
+        margin: 0 auto;
+        display: block;
+        background-color: #f9f9f9;
+        justify-self: center;
+        transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .block-image:hover {
+        transform: scale(1.1);
+        filter: brightness(1.1) contrast(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        position: relative;
+    }
+    
+    .visitor-message {
+        padding: 1.25rem 2rem;
+        margin: 1.5rem 0;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .visitor-message-close {
+        top: 0.75rem;
+        right: 1rem;
+    }
+    
+    .learn-more-btn {
+        grid-area: button;
+        justify-self: center;
+        margin-top: 0.5rem;
+    }
+}

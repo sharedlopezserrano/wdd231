@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Tournaments - Level Up Café & Arcade</title>
+  <meta name="description" content="Join gaming tournaments, themed nights, and special events at Level Up Café & Arcade. Register now and compete with fellow gamers.">
+  <meta name="author" content="Shared Lopez">
+  <link rel="icon" href="images/gamepad.svg" type="image/png">
+  <meta property="og:title" content="Gaming Events - Level Up Café & Arcade">
+  <meta property="og:description" content="Register for exciting gaming tournaments and themed events at our gaming restaurant.">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/join.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="images/gamepad.svg" alt="Gaming Controller Logo" width="32" height="32">
+    <span>Level Up Café & Arcade</span>
+    <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+    <nav id="nav-bar" class="navigation">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li class="current"><a href="events.html">Events</a></li>
+        <li><a href="gaming.html">Gaming Zones</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Gaming Events & Tournaments</h1>
+    
+    <div class="join-container">
+      <form method="get" action="thankyou.html" class="membership-form">
+        <h2>Event Registration</h2>
+        
+        <label for="first-name">
+          First Name *
+          <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+        </label>
+        
+        <label for="last-name">
+          Last Name *
+          <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+        </label>
+        
+        <label for="gamer-tag">
+          Gamer Tag
+          <input type="text" id="gamer-tag" name="gamer-tag" title="Enter your preferred gamer tag" pattern="[A-Za-z0-9\s\-_]{3,}" placeholder="Minimum 3 characters">
+        </label>
+        
+        <label for="email">
+          Email Address *
+          <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
+        </label>
+        
+        <label for="mobile">
+          Mobile Phone *
+          <input type="tel" id="mobile" name="mobile" title="Enter your mobile phone number" autocomplete="tel" required>
+        </label>
+        
+        <label for="favorite-game">
+          Favorite Game/Genre
+          <input type="text" id="favorite-game" name="favorite-game" title="Enter your favorite game or genre">
+        </label>
+        
+        <fieldset>
+          <legend>Event Type</legend>
+          <label for="tournament">
+            <input type="radio" id="tournament" name="event-type" value="Gaming Tournament">
+            Gaming Tournament
+          </label>
+          <label for="themed-night">
+            <input type="radio" id="themed-night" name="event-type" value="Themed Night">
+            Themed Night
+          </label>
+          <label for="gaming-marathon">
+            <input type="radio" id="gaming-marathon" name="event-type" value="Gaming Marathon">
+            Gaming Marathon
+          </label>
+          <label for="birthday-party">
+            <input type="radio" id="birthday-party" name="event-type" value="Birthday Party">
+            Birthday Party Package
+          </label>
+        </fieldset>
+        
+        <label for="special-requests">
+          Special Requests
+          <textarea id="special-requests" name="special-requests" title="Any special requests or dietary restrictions" rows="4"></textarea>
+        </label>
+        
+        <input type="hidden" id="timestamp" name="timestamp">
+        
+        <input type="submit" value="Register Now">
+      </form>
+      
+      <div class="membership-cards">
+        <h2>Event Packages</h2>
+        
+        <div class="card membership-card">
+          <h3>Tournament Entry</h3>
+          <p class="price">$15</p>
+          <p>Compete in weekly gaming tournaments</p>
+          <button type="button" class="info-btn" data-modal="tournament-modal">Learn More</button>
+        </div>
+        
+        <div class="card membership-card">
+          <h3>Themed Night</h3>
+          <p class="price">$25</p>
+          <p>Special themed gaming experiences</p>
+          <button type="button" class="info-btn" data-modal="themed-modal">Learn More</button>
+        </div>
+        
+        <div class="card membership-card">
+          <h3>Gaming Marathon</h3>
+          <p class="price">$35</p>
+          <p>All-night gaming sessions</p>
+          <button type="button" class="info-btn" data-modal="marathon-modal">Learn More</button>
+        </div>
+        
+        <div class="card membership-card">
+          <h3>Birthday Package</h3>
+          <p class="price">$150</p>
+          <p>Complete party experience for up to 8 people</p>
+          <button type="button" class="info-btn" data-modal="birthday-modal">Learn More</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modals -->
+    <div id="tournament-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Tournament Entry Benefits</h3>
+        <ul>
+          <li>Entry to weekly gaming tournaments</li>
+          <li>Complimentary gaming session (2 hours)</li>
+          <li>Tournament bracket participation</li>
+          <li>Prizes for winners</li>
+          <li>Special tournament menu discounts</li>
+          <li>Leaderboard tracking</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="themed-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Themed Night Experience</h3>
+        <ul>
+          <li>Special themed decorations</li>
+          <li>Costume contest participation</li>
+          <li>Themed menu items</li>
+          <li>Exclusive gaming experiences</li>
+          <li>Photo opportunities</li>
+          <li>Collectible themed merchandise</li>
+          <li>DJ and music matching the theme</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="marathon-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Gaming Marathon Package</h3>
+        <ul>
+          <li>8-hour all-night gaming session</li>
+          <li>Unlimited console access</li>
+          <li>Energy drinks and snacks included</li>
+          <li>Midnight meal included</li>
+          <li>Comfortable gaming chairs</li>
+          <li>Tournament-style competitions</li>
+          <li>Breakfast before departure</li>
+          <li>Achievement certificates</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="birthday-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Birthday Party Package</h3>
+        <ul>
+          <li>Private party area for up to 8 people</li>
+          <li>3-hour gaming session</li>
+          <li>Birthday cake included</li>
+          <li>Party decorations</li>
+          <li>Dedicated party host</li>
+          <li>Special birthday menu</li>
+          <li>Gaming tournament for guests</li>
+          <li>Party favor bags</li>
+          <li>Photo session with props</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <section class="contact">
+      <p class="black">Level Up Café & Arcade</p>
+      <p>123 Gaming Street</p>
+      <p>Arcade City, AC 12345</p>
+      <p>info@levelupcafe.com</p>
+      <p>(555) 123-GAME</p>
+    </section>
+    <div class="social-media">
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.svg" alt="linkedIn" width="24" height="24">
+      </a>
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+      </a>
+    </div>
+    <section class="info">
+      <p>WDD231 Class Project</p>
+      <p>Shared Lopez</p>
+      <p>© 2023 Level Up Café & Arcade</p>
+      <p id="last-modified"></p>
+    </section>
+  </footer>
+</body>
+</html>
