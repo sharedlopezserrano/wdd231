@@ -54,6 +54,24 @@ section h2 {
     color: var(--light-gold-color);
 }
 
+#wireframe a {
+    color: var(--dark-red-color);
+    font-weight: bold;
+}
+
+#wireframe a:hover {
+    color: var(--darker-red-color);
+}
+
+#contact a {
+    color: var(--dark-red-color);
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: var(--darker-red-color);
+}
+
 footer {
     background-color: var(--darker-red-color);
     text-align: center;
