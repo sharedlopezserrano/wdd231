@@ -49,7 +49,7 @@ function displayItems(gamesData) {
         theblock.appendChild(description)
 
         const learnMoreBtn = document.createElement("button")
-        learnMoreBtn.innerText = "Play Now"
+        learnMoreBtn.innerText = "Check Here"
         learnMoreBtn.classList.add("learn-more-btn");
         learnMoreBtn.addEventListener('click', () => {
             openGameModal(x);

@@ -13,7 +13,6 @@
   <meta property="og:url" content="">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/directory.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -25,25 +24,26 @@
     <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
     <nav id="nav-bar" class="navigation">
     <ul>
-      <li class="current"><a href="home.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
+      <li class="current"><a href="index.html">Home</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="gaming.html">Gaming Zones</a></li>
     </ul>
   </nav>
   </header>
   <main>
-    <h1>Welcome to Press Start Gaming Restaurant</h1>
+    <h1 class="tittle-name">Welcome to Press Start Gaming Restaurant</h1>
     <div class="hero">
       <img src="images/place.webp" alt="Press Start Gaming Restaurant interior with gaming stations and dining area" class="hero-img">
       <button class="hero-btn">Reserve Your Gaming Table</button>
     </div>
     
     <div class="welcome-section">
-      <h2>Game. Eat. Repeat.</h2>
-      <p>Welcome to the ultimate gaming and dining experience! At Press Start Gaming Restaurant, we combine delicious food with your favorite games for an unforgettable night out.</p>
+      <div class="horizontal-card">
+        <h2>Game. Eat. Repeat.</h2>
+        <p>Welcome to the ultimate gaming and dining experience! At Press Start Gaming Restaurant, we combine delicious food with your favorite games for an unforgettable night out.</p>
+      </div>
       
-      <div class="hours-card">
+      <div class="horizontal-card hours-card">
         <h3>We're Open</h3>
         <p class="hours">Monday - Saturday</p>
         <p class="hours-time">6:00 PM - 3:00 AM</p>
@@ -66,7 +66,8 @@
       </div>
     </div>
     
-    <script src="scripts/events.js"></script>
+    <script src="scripts/events.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
   </main>
   <footer>
     <section class="contact">
