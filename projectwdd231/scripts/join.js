@@ -1,109 +1,67 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Set timestamp when form loads
     const timestampField = document.getElementById('timestamp');
     if (timestampField) {
         timestampField.value = new Date().toISOString();
     }
 
-    const modals = document.querySelectorAll('.modal');
-    const infoButtons = document.querySelectorAll('.info-btn');
-    const closeButtons = document.querySelectorAll('.close');
+    // Handle modal functionality
+    setupModalHandlers();
+    
+    // Initialize hamburger menu from directory.js
+    if (typeof initHamburgerMenu === 'function') {
+        initHamburgerMenu();
+    }
+});
 
-    infoButtons.forEach(button => {
+function setupModalHandlers() {
+    // Get all buttons with data-modal attribute
+    const modalButtons = document.querySelectorAll('[data-modal]');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.modal .close');
+
+    // Add click event to modal trigger buttons
+    modalButtons.forEach(button => {
         button.addEventListener('click', function() {
             const modalId = this.getAttribute('data-modal');
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.style.display = 'block';
-                modal.setAttribute('tabindex', '-1');
-                modal.focus();
+                document.body.style.overflow = 'hidden';
             }
         });
     });
 
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+    // Add click event to close buttons
+    closeButtons.forEach(closeBtn => {
+        closeBtn.addEventListener('click', function() {
             const modal = this.closest('.modal');
             if (modal) {
                 modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         });
     });
 
-    window.addEventListener('click', function(event) {
-        modals.forEach(modal => {
-            if (event.target === modal) {
+    // Close modal when clicking outside
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
                 modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         });
     });
 
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
             modals.forEach(modal => {
                 if (modal.style.display === 'block') {
                     modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
                 }
             });
         }
     });
-
-    // Consolidated hamburger menu functionality
-    const hamburger = document.getElementById('ham-btn');
-    const navigation = document.getElementById('nav-bar');
-
-    if (hamburger && navigation) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('open');
-            navigation.classList.toggle('open');
-        });
-
-        // Close menu when clicking on a link (mobile)
-        const navLinks = navigation.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    navigation.classList.remove('open');
-                    hamburger.classList.remove('open');
-                }
-            });
-        });
-
-        // Close menu when resizing to desktop
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                navigation.classList.remove('open');
-                hamburger.classList.remove('open');
-            }
-        });
-    }
-
-    const form = document.querySelector('.membership-form');
-    if (form) {
-        form.addEventListener('submit', function(event) {
-            const orgTitle = document.getElementById('org-title');
-            if (orgTitle.value && !orgTitle.checkValidity()) {
-                event.preventDefault();
-                alert('Organizational title must be at least 7 characters and contain only letters, spaces, and hyphens.');
-                orgTitle.focus();
-                return false;
-            }
-        });
-    }
-
-    const membershipCards = document.querySelectorAll('.membership-card');
-    membershipCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
-
-    const lastModified = document.getElementById('last-modified');
-    if (lastModified) {
-        lastModified.textContent = `Last modified: ${document.lastModified}`;
-    }
-});
+}

@@ -35,8 +35,37 @@ function initHamburgerMenu() {
   }
 }
 
+function setupLazyLoading() {
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+  
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.classList.add('loaded');
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach(img => {
+      imageObserver.observe(img);
+      img.addEventListener('load', () => {
+        img.classList.add('loaded');
+      });
+    });
+  } else {
+    // Fallback for browsers without IntersectionObserver
+    lazyImages.forEach(img => {
+      img.classList.add('loaded');
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initHamburgerMenu();
+  setupLazyLoading();
   
   const heroBtn = document.querySelector('.hero-btn');
   if (heroBtn) {
