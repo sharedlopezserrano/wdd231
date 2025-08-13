@@ -331,7 +331,6 @@ h1 {
 img {
     max-width: 100%;
     height: auto;
-    background-color: var(--white-color);
 }
 
 .business-info {
