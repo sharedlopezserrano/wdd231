@@ -59,5 +59,4 @@ function displayFallbackEvents() {
   displayEvents(fallbackEvents);
 }
 
-// Load events when the page loads
 document.addEventListener('DOMContentLoaded', loadEvents);

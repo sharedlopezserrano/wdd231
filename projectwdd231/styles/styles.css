@@ -312,16 +312,6 @@ h1 {
     border: 2px solid var(--gold-color);
     flex-shrink: 0;
 }
-
-.business-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 6px;
-    aspect-ratio: 16 / 9;
-    background-color: var(--white-color);
-}
-
 .directory-grid,
 .directory-list {
     min-height: 400px;
@@ -689,6 +679,16 @@ footer {
     font-size: 1rem;
     color: var(--white-color);
     padding: 0 0 0 1rem;
+}
+
+.info a {
+    color: var(--white-color);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.info a:hover {
+    color: var(--light-gold-color);
 }
 
 footer p {
@@ -1092,7 +1092,6 @@ footer p {
     box-shadow: 0 4px 12px rgba(114, 14, 7, 0.3);
 }
 
-/* Utility Classes */
 .btn-primary {
     background: var(--dark-red-color);
     color: var(--white-color);
@@ -1275,7 +1274,6 @@ footer p {
     line-height: 1.4;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     * {
         box-sizing: border-box;

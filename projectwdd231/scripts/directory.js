@@ -56,7 +56,6 @@ function setupLazyLoading() {
       });
     });
   } else {
-    // Fallback for browsers without IntersectionObserver
     lazyImages.forEach(img => {
       img.classList.add('loaded');
     });
